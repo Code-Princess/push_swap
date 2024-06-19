@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:19:44 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/18 23:54:32 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 14:34:34 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ char	*read_from_fd_into_buffer(int fd, char *buffer);
 char	*adjust_buffer(char *old_buffer);
 char	*get_next_line(int fd);
 void	ft_putstr_fd_modified(const char *s, int fd);
+long	ft_atol(const char *str);
 
 #endif
