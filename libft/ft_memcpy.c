@@ -6,13 +6,13 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 10:50:56 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/12 10:25:35 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:49:35 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, void *src, size_t n)
 {
 	char	*cast_dst;
 	char	*cast_src;
@@ -34,9 +34,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	n;
 
 	char dst[] = "12345678";
-	const char src[] = "Halloooooooooo";
+	char src[] = "Halloooooooooo";
 	char dst2[] = "12345678";
-	const char src2[] = "Halloooooooooo";
+	char src2[] = "Halloooooooooo";
 	
 	char str3[] = "abcde";
 	char str4[] = "abcde";

@@ -6,15 +6,15 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:44:45 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/14 14:16:54 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:48:45 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen_help(const char *s);
+size_t	ft_strlen_help(char *s);
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(char *s1)
 {
 	char	*s2;
 	size_t	i;
@@ -33,7 +33,7 @@ char	*ft_strdup(const char *s1)
 	return (s2);
 }
 
-size_t	ft_strlen_help(const char *s)
+size_t	ft_strlen_help(char *s)
 {
 	size_t	len;
 

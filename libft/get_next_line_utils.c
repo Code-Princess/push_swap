@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:40:55 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/05/31 13:11:09 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:50:24 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_calloc_modified(size_t count, size_t size)
 	return (tmp);
 }
 
-int	ft_strlen_modified(const char *s)
+int	ft_strlen_modified(char *s)
 {
 	int	len;
 

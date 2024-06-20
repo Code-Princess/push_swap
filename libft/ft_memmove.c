@@ -6,13 +6,13 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 11:42:47 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/12 10:48:30 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:48:30 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, void *src, size_t len)
 {
 	char	*cast_dst;
 	char	*cast_src;

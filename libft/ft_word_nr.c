@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_word_nr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 14:21:27 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/19 17:50:24 by llacsivy         ###   ########.fr       */
+/*   Created: 2024/06/19 17:43:41 by llacsivy          #+#    #+#             */
+/*   Updated: 2024/06/19 21:06:23 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char *s, unsigned int start, size_t len)
+int	ft_word_nr(char *s, char c)
 {
-	char	*substr;
-	size_t	s_len;
-	size_t	i;
+	int	nr;
+	int	isseparator;
 
-	i = 0;
-	s_len = (ft_strlen(s));
-	if (s_len <= start)
-		len = 0;
-	else if ((s_len - start) < len)
-		len = s_len - start;
-	substr = (char *)ft_calloc(len + 1, 1);
-	if (substr == NULL)
-		return (NULL);
-	while (i < len)
+	nr = 0;
+	isseparator = 0;
+	while (*s != '\0')
 	{
-		substr[i] = s[start + i];
-		i++;
+		if (*s != c && isseparator == 0)
+		{
+			isseparator = 1;
+			nr++;
+		}
+		else if (*s == c)
+			isseparator = 0;
+		s++;
 	}
-	return (substr);
+	return (nr);
 }

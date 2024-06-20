@@ -6,16 +6,16 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 19:56:38 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/14 10:33:16 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:47:26 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(void *s, int c, size_t n)
 {
 	char			cast_c;
-	const char		*cast_s;
+	char			*cast_s;
 	size_t			i;
 
 	cast_c = (char)c;

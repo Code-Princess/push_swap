@@ -6,15 +6,15 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:14:25 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/14 16:35:29 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:50:36 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen_help(const char *s);
+static size_t	ft_strlen_help(char *s);
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*joinedstr;
 	size_t	s1_len;
@@ -43,7 +43,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (joinedstr);
 }
 
-static size_t	ft_strlen_help(const char *s)
+static size_t	ft_strlen_help(char *s)
 {
 	size_t	len;
 

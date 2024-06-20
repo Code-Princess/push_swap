@@ -6,13 +6,13 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:56:03 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/13 17:06:39 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:50:24 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	unsigned char	*cast_s1;
 	unsigned char	*cast_s2;

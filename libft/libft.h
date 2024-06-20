@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:19:44 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/19 14:34:34 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/20 12:13:50 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,29 +35,29 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memcpy(void *dst, void *src, size_t n);
+void	*ft_memmove(void *dst, void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlen(char *s);
+size_t	ft_strlcpy(char *dst, char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-void	*ft_memchr(const void *s, int c, size_t n);
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-int		ft_atoi(const char *str);
+char	*ft_strchr(char *s, int c);
+char	*ft_strrchr(char *s, int c);
+int		ft_strncmp(char *s1, char *s2, size_t n);
+void	*ft_memchr(void *s, int c, size_t n);
+int		ft_memcmp(void *s1, void *s2, size_t n);
+char	*ft_strnstr(char *haystack, char *needle, size_t len);
+int		ft_atoi(char *str);
 void	*ft_calloc(size_t count, size_t size);
-char	*ft_strdup(const char *s1);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
+char	*ft_strdup(char *s1);
+char	*ft_substr(char *s, unsigned int start, size_t len);
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strtrim(char *s1, char *set);
+char	**ft_split(char *s, char c);
 char	*ft_itoa(int n);
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(char *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
@@ -72,7 +72,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-int		ft_printf(const char *inputStr, ...);
+int		ft_printf(char *inputStr, ...);
 int		ft_putchar(char c, int *error_ptr);
 int		ft_putstr(char *str, int *error_ptr);
 int		ft_putpercent(int *error_ptr);
@@ -84,17 +84,18 @@ char	*ft_itoa_unsigned(unsigned int n);
 char	*ft_itoa_hexadecimal(unsigned int n);
 char	*ft_itoa_hexadecimal_upper(unsigned int n);
 char	*ft_itoa_hexadecimal_ptr(unsigned long n);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
 int		ft_putptr(unsigned long ptr, int *error_ptr);
-int		ft_strlen_modified(const char *c);
+int		ft_strlen_modified(char *c);
 void	ft_bzero(void *s, size_t n);
 char	*ft_calloc_modified(size_t count, size_t size);
-char	*ft_strchr(const char *s, int c);
+char	*ft_strchr(char *s, int c);
 char	*ft_strjoin_modified(char *s1, char *s2, int s2_len);
 char	*read_from_fd_into_buffer(int fd, char *buffer);
 char	*adjust_buffer(char *old_buffer);
 char	*get_next_line(int fd);
-void	ft_putstr_fd_modified(const char *s, int fd);
-long	ft_atol(const char *str);
+void	ft_putstr_fd_modified(char *s, int fd);
+long	ft_atol(char *str);
+int		ft_word_nr(char *s, char c);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:38:25 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/18 17:00:39 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:50:24 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char *set)
 {
 	size_t	start;
 	size_t	end;

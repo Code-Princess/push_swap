@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 11:51:51 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/04/09 15:14:14 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:47:57 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_checkplaceholder(char c, va_list args, int *error_ptr);
 
-int	ft_printf(const char *inputStr, ...)
+int	ft_printf(char *inputStr, ...)
 {
 	va_list	args;
 	int		str_len;

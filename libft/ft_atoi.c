@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 11:19:43 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/14 12:53:30 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:47:03 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ft_isspace_help(int c);
 static int	ft_isdigit_help(int c);
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	int	number;
 	int	sign;

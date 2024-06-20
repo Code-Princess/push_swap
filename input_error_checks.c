@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:53:57 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/19 15:10:28 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/20 17:01:15 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	is_valid_input(int nr_of_words, char **input_str)
 {
 	int	i;
 
-	i = 1;
-	while (i <= nr_of_words)
+	i = 0;
+	while (i < nr_of_words - 1)
 	{
 		if (!is_valid_str(input_str[i]) || !is_int(ft_atol(input_str[i])))
 			return (0);

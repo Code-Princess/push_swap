@@ -6,15 +6,15 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 10:15:20 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/03/13 14:35:03 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:49:47 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen_help(const char *str);
+static size_t	ft_strlen_help(char *str);
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 {
 	size_t	len;
 	size_t	src_len;
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (len);
 }
 
-static size_t	ft_strlen_help(const char *str)
+static size_t	ft_strlen_help(char *str)
 {
 	size_t	n;
 
@@ -59,7 +59,7 @@ static size_t	ft_strlen_help(const char *str)
 
 	// lib strlcpy
     char dst1[] = "123456789";
-    const char *src1;
+    char *src1;
     size_t dstsize1;
     size_t len_out1;
     src1 = "abcd";
@@ -73,7 +73,7 @@ static size_t	ft_strlen_help(const char *str)
 
     // my ft_strlcpy
     char dst11[] = "123456789";
-    const char *src11;
+    char *src11;
     size_t dstsize11;
     size_t len_out11;
     src11 = "abcd";
