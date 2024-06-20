@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:53:57 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/20 17:01:15 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:11:19 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,44 @@ int	is_valid_input(int nr_of_words, char **input_str)
 		i++;
 	}
 	return (1);
+}
+
+int is_double (t_list_push_swap *lst)
+{
+	t_list_push_swap *temp_i;
+	t_list_push_swap *temp_j;
+
+	temp_i = lst;
+	while (temp_i && temp_i->next)
+	{
+		temp_j = temp_i->next;
+		while (temp_j)
+		{
+			if (temp_i->nbr == temp_j->nbr)
+				return (1);
+			temp_j = temp_j->next;
+		}
+		temp_i = temp_i->next;
+	}
+	return (0);
+}
+
+int is_unsorted(t_list_push_swap *lst)
+{
+	t_list_push_swap *temp_i;
+	t_list_push_swap *temp_j;
+
+	temp_i = lst;
+	while (temp_i && temp_i->next)
+	{
+		temp_j = temp_i->next;
+		while (temp_j)
+		{
+			if (temp_i->nbr > temp_j->nbr)
+				return (1);
+			temp_j = temp_j->next;
+		}
+		temp_i = temp_i->next;
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:16:52 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/20 12:15:22 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/20 17:51:43 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ft_lstadd_back_push_swap(t_list_push_swap **lst, t_list_push_swap *new)
 {
 	t_list_push_swap	*last_node;
 
-	last_node = ft_lstlast(*lst);
+	last_node = ft_lstlast_push_swap(*lst);
 	if (last_node == NULL)
 		*lst = new;
 	else

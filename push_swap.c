@@ -6,21 +6,31 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/20 17:05:22 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:14:02 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
+
+void	del_int(int nbr)
+{
+	(void)nbr; // Suppress unused parameter warning
+}
+
 int	main(int argc, char *argv[])
 {
-	char	**res;
-	char	*s;
-	int		i;
-	int		flag_allocated;
+	char				**res;
+	char				*s;
+	int					flag_allocated;
+	int					i;
+	t_list_push_swap 	*stack_a;
+	t_list_push_swap	*stack_b;
 
 	flag_allocated = 0;
+	stack_a = NULL;
+	stack_b = NULL;
 	if (argc == 2)
 	{
 		flag_allocated = 1;
@@ -34,63 +44,49 @@ int	main(int argc, char *argv[])
 	}
 	if (!is_valid_input(argc, argv + 1))
 	{
-printf("argc is 1\n");
-		if (flag_allocated == 1)
-		{
-			while (--argc >= 0)
-				free(argv[argc]);
-printf("argc is 2\n");
-			free(argv);
-		}
+
+		free_double_pointer(argc, argv, flag_allocated);
 		ft_putstr_fd("Error\n", 2);
 		return (1);
 	}
-	//we need to free when we are terminating our prompt
 	if (argc == 1 || argc == 2)
 	{
-		if (flag_allocated == 1)
-		{
-		// 1, 0 || 0
-			while (--argc >= 0)
-				free(argv[argc]);
-			free(argv);
-		}
+		free_double_pointer(argc, argv, flag_allocated);
 		ft_putstr_fd("\n", 1);
 		return (0);
 	}
 	else if (argc == 3)
 	{
+		if (ft_atoi(argv[1]) == ft_atoi(argv[2]))
+			return (ft_putstr_fd("Error\n", 2), 1);
 		if (ft_atoi(argv[1]) > ft_atoi(argv[2]))
-			ft_putstr_fd("sa", 1);
-		if (flag_allocated == 1)
-		{
-			while (--argc >= 0)
-				free(argv[argc]);
-			free(argv);
-		}
-		ft_putstr_fd("\n", 1);
+			ft_putstr_fd("sa\n", 1);
+		free_double_pointer(argc, argv, flag_allocated);
 		return (0);
 	}
-	// if (argc > 2)
-	// {
-		
-	// }
-	i = -1;
+	i = 0;
+	// "4" "5" "6"
+	// 4 ====> [4]->
+	// [4]->, 5 ======> [4]->[5]
+	// [4]->[5], 6 ======>[4]->[5]->[6]
 	while (++i < argc)
-		printf("the  %d arg: %s\n", i, argv[i]);
-	
-
-// argc = 0;
-// printf("is_valid_input: %d\n", is_valid_input(ft_word_nr(argv[1], ' '), argv));
-	// if (is_valid_input(argc - 1, argv))
-	// {
-	// 	printf("1");
-	// 	return (0);
-	// }
-	// else
-	// 	return (1);
-	// argc = 0;
-	// printf("is_valid_str: %d\n", is_valid_str(argv[1]));
-	// if (is_valid_str(argv[1]))
-	// 	printf("is_int: %d\n", is_int(ft_atol(argv[1])));
+		ft_lstadd_back_push_swap(&stack_a,
+			ft_lstnew_push_swap(ft_atoi(argv[i])));
+	free_double_pointer(argc, argv, flag_allocated);
+	if (is_double(stack_a))
+	{
+		ft_putstr_fd("Error\n", 2);
+		ft_lstclear_push_swap(&stack_a, del_int);
+		// system("leaks push_swap");
+		return (1);
+	}
+	if (!is_unsorted(stack_a))
+	{
+		ft_lstclear_push_swap(&stack_a, del_int);
+		// system("leaks push_swap");
+		return (1);
+	}
+	ft_lstclear_push_swap(&stack_a, del_int);
+	printf("Non Sorted");
+	return (0);
 }
