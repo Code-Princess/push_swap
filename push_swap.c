@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/20 19:14:02 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/21 12:22:42 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	del_int(int nbr)
 {
-	(void)nbr; // Suppress unused parameter warning
+	(void)nbr;
 }
 
 int	main(int argc, char *argv[])
@@ -26,11 +26,11 @@ int	main(int argc, char *argv[])
 	int					flag_allocated;
 	int					i;
 	t_list_push_swap 	*stack_a;
-	t_list_push_swap	*stack_b;
+	// t_list_push_swap	*stack_b;
 
 	flag_allocated = 0;
 	stack_a = NULL;
-	stack_b = NULL;
+	// stack_b = NULL;
 	if (argc == 2)
 	{
 		flag_allocated = 1;
@@ -72,6 +72,7 @@ int	main(int argc, char *argv[])
 	while (++i < argc)
 		ft_lstadd_back_push_swap(&stack_a,
 			ft_lstnew_push_swap(ft_atoi(argv[i])));
+	print_double_pointer(argc, argv);
 	free_double_pointer(argc, argv, flag_allocated);
 	if (is_double(stack_a))
 	{
@@ -86,7 +87,7 @@ int	main(int argc, char *argv[])
 		// system("leaks push_swap");
 		return (1);
 	}
-	ft_lstclear_push_swap(&stack_a, del_int);
-	printf("Non Sorted");
+	
+	print_stack(stack_a);
 	return (0);
 }
