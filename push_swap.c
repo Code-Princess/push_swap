@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/21 12:51:53 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/21 15:18:26 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ int	main(int argc, char *argv[])
 	while (++i < argc)
 		ft_lstadd_back_push_swap(&stack_a,
 			ft_lstnew_push_swap(ft_atoi(argv[i])));
-	print_double_pointer(argc, argv);
 	free_double_pointer(argc, argv, flag_allocated);
 	if (is_double(stack_a))
 	{
@@ -88,7 +87,13 @@ int	main(int argc, char *argv[])
 		// system("leaks push_swap");
 		return (1);
 	}
-	
+	sorted_lst = copy_list(stack_a);
+	sorted_lst = sort_list(sorted_lst, ascending);
+	ft_printf("==========Before========\n");
+	print_stack(stack_a);
+	print_stack(sorted_lst);
+	ft_printf("==========After========\n");
+	indexing_list(&stack_a, sorted_lst);
 	print_stack(stack_a);
 	return (0);
 }

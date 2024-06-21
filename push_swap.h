@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/21 12:49:25 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/21 15:16:06 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void				ft_lstadd_back_push_swap(t_list_push_swap **lst,
 //========LIST_RELATED_OPERATIONS_TWO============
 void				ft_lstdelone_push_swap(t_list_push_swap *lst,
 						void (*del)(int));
+void				del_int(int nbr);
 void				ft_lstclear_push_swap(t_list_push_swap **lst,
 						void (*del)(int));
 void				ft_lstiter_push_swap(t_list_push_swap *lst,
@@ -45,12 +46,15 @@ void				ft_lstiter_push_swap(t_list_push_swap *lst,
 t_list_push_swap	*ft_lstmap_push_swap(t_list_push_swap *lst,
 						int(*f)(int),
 						void (*del)(int));
-//==========PRINT_HELPERS========================
+//==========PRINT_HELPERS===========================
 void				print_double_pointer(int argc, char **argv);
 void				print_stack(t_list_push_swap *lst);
-//==========FREE_FUNCTIONS========================
+//==========FREE_FUNCTIONS==========================
 void				free_double_pointer(int argc, char **argv, int flag);
 //==========SORTING_FUNCTIONS========================
 t_list_push_swap	*sort_list(t_list_push_swap *lst, int (*cmp)(int, int));
-
+int					ascending(int a, int b);
+t_list_push_swap 	*copy_list(t_list_push_swap *lst);
+void    			indexing_list(t_list_push_swap **stack_a,
+						t_list_push_swap *copied);
 #endif
