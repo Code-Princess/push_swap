@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/21 12:19:17 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/21 12:49:25 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ void				print_double_pointer(int argc, char **argv);
 void				print_stack(t_list_push_swap *lst);
 //==========FREE_FUNCTIONS========================
 void				free_double_pointer(int argc, char **argv, int flag);
+//==========SORTING_FUNCTIONS========================
+t_list_push_swap	*sort_list(t_list_push_swap *lst, int (*cmp)(int, int));
 
 #endif

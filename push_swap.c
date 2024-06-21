@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/21 12:22:42 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/21 12:51:53 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main(int argc, char *argv[])
 	char				*s;
 	int					flag_allocated;
 	int					i;
+	t_list_push_swap	*sorted_lst;
 	t_list_push_swap 	*stack_a;
 	// t_list_push_swap	*stack_b;
 
