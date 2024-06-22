@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/22 15:42:20 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 16:37:08 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	main(int argc, char *argv[])
 	indexing_list(&stack_a, sorted_lst);
 	print_stack(stack_a);
 	ft_printf("==========TEST COMMAND HELPERS========\n");
-	extract_first_node(&stack_a);
+	extract_last_node(&stack_a);
 	print_stack(stack_a);
 	return (0);
 }
