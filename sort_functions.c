@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 12:32:09 by linda             #+#    #+#             */
-/*   Updated: 2024/06/22 15:20:42 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 17:58:52 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ t_list_push_swap *sort_list(t_list_push_swap *lst, int (*cmp)(int, int))
 {	int	tmp_data;
 	t_list_push_swap *tmp;
 	tmp = lst;
-    print_stack(lst);
 	while(lst->next != NULL)
 	{
 		if (((*cmp)(lst->nbr, lst->next->nbr)) == 0)

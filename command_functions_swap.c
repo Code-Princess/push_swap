@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   command_functions.c                                :+:      :+:    :+:   */
+/*   command_functions_swap.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 15:43:42 by linda             #+#    #+#             */
-/*   Updated: 2024/06/22 17:32:53 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 17:46:48 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,5 @@ void swap_swap_and_print(t_list_push_swap **stack_a, t_list_push_swap **stack_b)
     swap(stack_b);
     ft_printf("ss\n");
 }
+
+

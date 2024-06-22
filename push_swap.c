@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/22 17:31:49 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 18:06:00 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ int	main(int argc, char *argv[])
 	}
 	sorted_lst = copy_list(stack_a);
 	sorted_lst = sort_list(sorted_lst, ascending);
+
+	
 	// ft_printf("==========Before========\n");
 	// print_stack(stack_a);
 	// print_stack(sorted_lst);
@@ -95,10 +97,15 @@ int	main(int argc, char *argv[])
 	// extract_last_node(&stack_a);
 	// print_stack(stack_a);
 	// swap_and_print(&stack_a, 'b');
-	print_stack(stack_a);
+	// print_stack(stack_a);
+	// print_stack(sorted_lst);
+	// swap_swap_and_print(&stack_a, &sorted_lst);
+	// print_stack(stack_a);
+	// print_stack(sorted_lst);
 	print_stack(sorted_lst);
-	swap_swap_and_print(&stack_a, &sorted_lst);
 	print_stack(stack_a);
+	push_to_b_and_print(&sorted_lst, &stack_a);
 	print_stack(sorted_lst);
+	print_stack(stack_a);
 	return (0);
 }
