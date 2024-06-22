@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/21 15:16:06 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 15:42:20 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,6 @@ int					ascending(int a, int b);
 t_list_push_swap 	*copy_list(t_list_push_swap *lst);
 void    			indexing_list(t_list_push_swap **stack_a,
 						t_list_push_swap *copied);
+//==========COMMMAND_FUNCTIONS========================
+t_list_push_swap	*extract_first_node(t_list_push_swap **lst);
 #endif

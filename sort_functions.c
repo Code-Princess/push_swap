@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 12:32:09 by linda             #+#    #+#             */
-/*   Updated: 2024/06/21 15:38:11 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 15:20:42 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void    indexing_list(t_list_push_swap **stack_a, t_list_push_swap *copied)
         tmp_copy = copied;
         while(tmp_copy)
         {
-            ft_printf("%d iteration. %d == %d\n", i, tmp->nbr, tmp_copy->nbr);
             if (tmp->nbr == tmp_copy->nbr)
             {
                 tmp->nbr = i;

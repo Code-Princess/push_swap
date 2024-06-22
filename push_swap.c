@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/21 15:18:26 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 15:42:20 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,6 @@ int	main(int argc, char *argv[])
 		return (0);
 	}
 	i = 0;
-	// "4" "5" "6"
-	// 4 ====> [4]->
-	// [4]->, 5 ======> [4]->[5]
-	// [4]->[5], 6 ======>[4]->[5]->[6]
 	while (++i < argc)
 		ft_lstadd_back_push_swap(&stack_a,
 			ft_lstnew_push_swap(ft_atoi(argv[i])));
@@ -94,6 +90,9 @@ int	main(int argc, char *argv[])
 	print_stack(sorted_lst);
 	ft_printf("==========After========\n");
 	indexing_list(&stack_a, sorted_lst);
+	print_stack(stack_a);
+	ft_printf("==========TEST COMMAND HELPERS========\n");
+	extract_first_node(&stack_a);
 	print_stack(stack_a);
 	return (0);
 }

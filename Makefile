@@ -6,7 +6,7 @@
 #    By: linda <linda@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/18 23:29:38 by llacsivy          #+#    #+#              #
-#    Updated: 2024/06/21 12:48:19 by linda            ###   ########.fr        #
+#    Updated: 2024/06/22 14:24:07 by linda            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS 		= -Wall -Wextra -Werror
 LIBFTDOTA	= libft/libft.a
 SRCS 		= push_swap.c input_error_checks.c helper_list_one.c \
 				helper_list_two.c free_functions.c print_helpers.c \
-				sort_functions.c
+				sort_functions.c command_helpers.c 
 
 
 OBJS 		= ${SRCS:.c=.o}
