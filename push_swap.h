@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/22 18:06:39 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 20:43:27 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,17 @@ t_list_push_swap	*extract_first_node(t_list_push_swap **lst);
 t_list_push_swap    *extract_last_node(t_list_push_swap **lst);
 void				swap_and_print(t_list_push_swap **stack, char stack_name);
 void    			swap(t_list_push_swap **stack);
-void				swap_swap_and_print(t_list_push_swap **stack_a, t_list_push_swap **stack_b);
-void				push_to_a_and_print(t_list_push_swap **stack_b, t_list_push_swap **stack_a);
-void				push_to_b_and_print(t_list_push_swap **stack_a, t_list_push_swap **stack_b);
+void				swap_swap_and_print(t_list_push_swap **stack_a, 
+						t_list_push_swap **stack_b);
+void				push_to_a_and_print(t_list_push_swap **stack_b, 
+						t_list_push_swap **stack_a);
+void				push_to_b_and_print(t_list_push_swap **stack_a, 
+						t_list_push_swap **stack_b);
+void				rotate_and_print(t_list_push_swap **stack, char stack_name);
+void				rotate_rotate_and_print(t_list_push_swap **stack_a, 
+						t_list_push_swap **stack_b);
+void				reverse_rotate_and_print(t_list_push_swap **stack, 
+						char stack_name);
+void				reverse_rotate_rotate_and_print(t_list_push_swap **stack_a, 
+						t_list_push_swap **stack_b);
 #endif

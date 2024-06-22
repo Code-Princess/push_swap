@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/22 18:06:00 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 20:45:36 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,10 +102,23 @@ int	main(int argc, char *argv[])
 	// swap_swap_and_print(&stack_a, &sorted_lst);
 	// print_stack(stack_a);
 	// print_stack(sorted_lst);
-	print_stack(sorted_lst);
+	// print_stack(sorted_lst);
+	// print_stack(stack_a);
+	// push_to_b_and_print(&sorted_lst, &stack_a);
+	// print_stack(sorted_lst);
+	// print_stack(stack_a);
+	// print_stack(stack_a);
+	// rotate_and_print(&stack_a, 'a');
+	// print_stack(stack_a);
+	// print_stack(stack_a);
+	// print_stack(sorted_lst);
+	// rotate_rotate_and_print(&sorted_lst, &stack_a);
+	// print_stack(stack_a);
+	// print_stack(sorted_lst);
 	print_stack(stack_a);
-	push_to_b_and_print(&sorted_lst, &stack_a);
 	print_stack(sorted_lst);
+	reverse_rotate_rotate_and_print(&sorted_lst, &stack_a);
 	print_stack(stack_a);
+	print_stack(sorted_lst);
 	return (0);
 }
