@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/22 16:33:35 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/22 17:30:24 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,7 @@ void    			indexing_list(t_list_push_swap **stack_a,
 //==========COMMMAND_FUNCTIONS========================
 t_list_push_swap	*extract_first_node(t_list_push_swap **lst);
 t_list_push_swap    *extract_last_node(t_list_push_swap **lst);
+void				swap_and_print(t_list_push_swap **stack, char stack_name);
+void    			swap(t_list_push_swap **stack);
+void				swap_swap_and_print(t_list_push_swap **stack_a, t_list_push_swap **stack_b);
 #endif
