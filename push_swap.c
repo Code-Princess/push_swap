@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/23 20:39:44 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/23 23:36:14 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int	main(int argc, char *argv[])
 	int					i;
 	t_list_push_swap	*sorted_lst;
 	t_list_push_swap 	*stack_a;
-	// t_list_push_swap	*stack_b;
+	t_list_push_swap	*stack_b;
 
 	flag_allocated = 0;
 	stack_a = NULL;
-	// stack_b = NULL;
+	stack_b = NULL;
 	if (argc == 2)
 	{
 		flag_allocated = 1;
@@ -78,9 +78,9 @@ int	main(int argc, char *argv[])
 	sorted_lst = sort_list(sorted_lst, ascending);
 	indexing_list(&stack_a, sorted_lst);
 	if (argc == 4)
-	{
 		sort_three_numbers(&stack_a);
-	}
+	if (argc == 5)
+		sort_four_numbers(&stack_a, &stack_b);
 
 
 	return (0);
