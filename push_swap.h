@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/23 23:33:28 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 00:20:18 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int					is_double (t_list_push_swap *lst);
 int 				is_unsorted(t_list_push_swap *lst);
 void        		sort_three_numbers(t_list_push_swap **lst);
 void        		sort_four_numbers(t_list_push_swap **stack_a, t_list_push_swap **stack_b);
+void        		sort_five_numbers(t_list_push_swap **stack_a, t_list_push_swap **stack_b);
+void        		sort_five_numbers(t_list_push_swap **stack_a, t_list_push_swap **stack_b);
 //=========LIST_RELATED_OPERATIONS_ONE=============
 t_list_push_swap	*ft_lstnew_push_swap(int nbr);
 void				ft_lstadd_front_push_swap(t_list_push_swap **lst,

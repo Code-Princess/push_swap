@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 11:26:03 by linda             #+#    #+#             */
-/*   Updated: 2024/06/24 00:01:38 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 00:43:00 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,29 @@ void        sort_four_numbers(t_list_push_swap **stack_a, t_list_push_swap **sta
     }
     push_to_and_print(stack_a, stack_b, 'b');
     sort_three_numbers(stack_a);
+    push_to_and_print(stack_b, stack_a, 'a');
+}
+
+void        sort_five_numbers(t_list_push_swap **stack_a, t_list_push_swap **stack_b)
+{
+    int               pos_min;
+    int               len;
+
+    len = 5;
+    while (--len >= 3)
+    {
+        pos_min = find_node_position(*stack_a, find_minimum_node_nbr(*stack_a));
+        printf("pos_min of %d: %d\n", find_node(*stack_a, find_minimum_node_nbr(*stack_a))->nbr, pos_min);
+        printf("//=========Before========\n");
+        print_stack(*stack_a);
+        while (--pos_min >= 0)
+            rotate_and_print(stack_a, 'a');
+        push_to_and_print(stack_a, stack_b, 'b');
+        printf("//=========After========\n");
+        print_stack(*stack_a);
+    }
+    sort_three_numbers(stack_a);
+    print_stack(*stack_a);
+    push_to_and_print(stack_b, stack_a, 'a');
     push_to_and_print(stack_b, stack_a, 'a');
 }

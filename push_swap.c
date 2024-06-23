@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/23 23:36:14 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 00:24:02 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,8 @@ int	main(int argc, char *argv[])
 		sort_three_numbers(&stack_a);
 	if (argc == 5)
 		sort_four_numbers(&stack_a, &stack_b);
-
-
+	if (argc == 6)
+		sort_five_numbers(&stack_a, &stack_b);
+	print_stack(stack_a);
 	return (0);
 }
