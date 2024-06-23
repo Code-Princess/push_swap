@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/22 20:45:36 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/23 14:00:02 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,27 +44,19 @@ int	main(int argc, char *argv[])
 		free(s);
 	}
 	if (!is_valid_input(argc, argv + 1))
-	{
-
-		free_double_pointer(argc, argv, flag_allocated);
-		ft_putstr_fd("Error\n", 2);
-		return (1);
-	}
+		return (free_double_pointer(argc, argv, flag_allocated), 
+			ft_putstr_fd("Error\n", 2), 1);
 	if (argc == 1 || argc == 2)
-	{
-		free_double_pointer(argc, argv, flag_allocated);
-		ft_putstr_fd("\n", 1);
-		return (0);
-	}
+		return (free_double_pointer(argc, argv, flag_allocated), 0);
 	else if (argc == 3)
 	{
 		if (ft_atoi(argv[1]) == ft_atoi(argv[2]))
 			return (ft_putstr_fd("Error\n", 2), 1);
 		if (ft_atoi(argv[1]) > ft_atoi(argv[2]))
 			ft_putstr_fd("sa\n", 1);
-		free_double_pointer(argc, argv, flag_allocated);
-		return (0);
+		return (free_double_pointer(argc, argv, flag_allocated), 0);
 	}
+	
 	i = 0;
 	while (++i < argc)
 		ft_lstadd_back_push_swap(&stack_a,

@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/22 20:43:27 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/23 13:23:22 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int					is_int(long nbr);
 int					is_valid_input(int nr_of_words, char **input_str);
 int					is_double (t_list_push_swap *lst);
 int 				is_unsorted(t_list_push_swap *lst);
+int				parse_input_string(int argc, char *argv[], int flag_malloc);
 //=========LIST_RELATED_OPERATIONS_ONE==========
 t_list_push_swap	*ft_lstnew_push_swap(int nbr);
 void				ft_lstadd_front_push_swap(t_list_push_swap **lst,
