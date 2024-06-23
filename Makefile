@@ -6,7 +6,7 @@
 #    By: linda <linda@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/18 23:29:38 by llacsivy          #+#    #+#              #
-#    Updated: 2024/06/23 13:17:40 by linda            ###   ########.fr        #
+#    Updated: 2024/06/23 20:17:45 by linda            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,8 @@ SRCS 		= push_swap.c input_error_checks.c helper_list_one.c \
 				helper_list_two.c free_functions.c print_helpers.c \
 				sort_functions.c command_helpers.c command_functions_swap.c \
 				command_functions_push.c command_functions_rotate.c \
-				sort_small_amount_of_numbers.c parse_input_str.c
-
+				sort_small_amount_of_numbers.c helper_list_three.c \
+				
 
 OBJS 		= ${SRCS:.c=.o}
 

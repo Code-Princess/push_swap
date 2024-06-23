@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/23 13:23:22 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/23 18:42:01 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 typedef struct s_list_push_swap
 {
 	int				nbr;
+	int				position;
 	struct s_list_push_swap	*next;
 }					t_list_push_swap;
 
@@ -27,8 +28,8 @@ int					is_int(long nbr);
 int					is_valid_input(int nr_of_words, char **input_str);
 int					is_double (t_list_push_swap *lst);
 int 				is_unsorted(t_list_push_swap *lst);
-int				parse_input_string(int argc, char *argv[], int flag_malloc);
-//=========LIST_RELATED_OPERATIONS_ONE==========
+void        		sort_three_numbers(t_list_push_swap **lst);
+//=========LIST_RELATED_OPERATIONS_ONE=============
 t_list_push_swap	*ft_lstnew_push_swap(int nbr);
 void				ft_lstadd_front_push_swap(t_list_push_swap **lst,
 						t_list_push_swap *new);
@@ -36,7 +37,7 @@ int					ft_lstsize_push_swap(t_list_push_swap *lst);
 t_list_push_swap	*ft_lstlast_push_swap(t_list_push_swap *lst);
 void				ft_lstadd_back_push_swap(t_list_push_swap **lst,
 						t_list_push_swap *new);
-//========LIST_RELATED_OPERATIONS_TWO============
+//========LIST_RELATED_OPERATIONS_TWO==============
 void				ft_lstdelone_push_swap(t_list_push_swap *lst,
 						void (*del)(int));
 void				del_int(int nbr);
@@ -47,6 +48,11 @@ void				ft_lstiter_push_swap(t_list_push_swap *lst,
 t_list_push_swap	*ft_lstmap_push_swap(t_list_push_swap *lst,
 						int(*f)(int),
 						void (*del)(int));
+//========LIST_RELATED_OPERATIONS_THREE=============
+int 				find_node_position(t_list_push_swap *lst, int nbr);
+t_list_push_swap 	*find_node(t_list_push_swap *lst, int nbr);
+int					find_maximum_node_nbr(t_list_push_swap *lst);
+int 				find_minimum_node_nbr(t_list_push_swap *lst);
 //==========PRINT_HELPERS===========================
 void				print_double_pointer(int argc, char **argv);
 void				print_stack(t_list_push_swap *lst);
@@ -62,18 +68,18 @@ void    			indexing_list(t_list_push_swap **stack_a,
 t_list_push_swap	*extract_first_node(t_list_push_swap **lst);
 t_list_push_swap    *extract_last_node(t_list_push_swap **lst);
 void				swap_and_print(t_list_push_swap **stack, char stack_name);
-void    			swap(t_list_push_swap **stack);
-void				swap_swap_and_print(t_list_push_swap **stack_a, 
-						t_list_push_swap **stack_b);
-void				push_to_a_and_print(t_list_push_swap **stack_b, 
-						t_list_push_swap **stack_a);
-void				push_to_b_and_print(t_list_push_swap **stack_a, 
-						t_list_push_swap **stack_b);
+// void    			swap(t_list_push_swap **stack);
+// void				swap_swap_and_print(t_list_push_swap **stack_a, 
+// 						t_list_push_swap **stack_b);
+void				push_to_and_print(t_list_push_swap **stack_b, 
+						t_list_push_swap **stack_a, char stack_name);
+// void				push_to_b_and_print(t_list_push_swap **stack_a, 
+// 						t_list_push_swap **stack_b);
 void				rotate_and_print(t_list_push_swap **stack, char stack_name);
-void				rotate_rotate_and_print(t_list_push_swap **stack_a, 
-						t_list_push_swap **stack_b);
+// void				rotate_rotate_and_print(t_list_push_swap **stack_a, 
+// 						t_list_push_swap **stack_b);
 void				reverse_rotate_and_print(t_list_push_swap **stack, 
 						char stack_name);
-void				reverse_rotate_rotate_and_print(t_list_push_swap **stack_a, 
-						t_list_push_swap **stack_b);
+// void				reverse_rotate_rotate_and_print(t_list_push_swap **stack_a, 
+// 						t_list_push_swap **stack_b);
 #endif

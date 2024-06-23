@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helper_list_one.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:16:52 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/20 17:51:43 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/23 16:52:51 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list_push_swap	*ft_lstnew_push_swap(int nbr)
 	if (new_node == NULL)
 		return (NULL);
 	new_node->nbr = nbr;
+	new_node->position = 0;
 	new_node->next = NULL;
 	return (new_node);
 }

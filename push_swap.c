@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/23 14:00:02 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/23 20:39:44 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ int	main(int argc, char *argv[])
 			ft_putstr_fd("sa\n", 1);
 		return (free_double_pointer(argc, argv, flag_allocated), 0);
 	}
-	
 	i = 0;
 	while (++i < argc)
 		ft_lstadd_back_push_swap(&stack_a,
@@ -77,40 +76,12 @@ int	main(int argc, char *argv[])
 	}
 	sorted_lst = copy_list(stack_a);
 	sorted_lst = sort_list(sorted_lst, ascending);
+	indexing_list(&stack_a, sorted_lst);
+	if (argc == 4)
+	{
+		sort_three_numbers(&stack_a);
+	}
 
-	
-	// ft_printf("==========Before========\n");
-	// print_stack(stack_a);
-	// print_stack(sorted_lst);
-	// ft_printf("==========After========\n");
-	// indexing_list(&stack_a, sorted_lst);
-	// print_stack(stack_a);
-	ft_printf("==========TEST COMMAND HELPERS========\n");
-	// extract_last_node(&stack_a);
-	// print_stack(stack_a);
-	// swap_and_print(&stack_a, 'b');
-	// print_stack(stack_a);
-	// print_stack(sorted_lst);
-	// swap_swap_and_print(&stack_a, &sorted_lst);
-	// print_stack(stack_a);
-	// print_stack(sorted_lst);
-	// print_stack(sorted_lst);
-	// print_stack(stack_a);
-	// push_to_b_and_print(&sorted_lst, &stack_a);
-	// print_stack(sorted_lst);
-	// print_stack(stack_a);
-	// print_stack(stack_a);
-	// rotate_and_print(&stack_a, 'a');
-	// print_stack(stack_a);
-	// print_stack(stack_a);
-	// print_stack(sorted_lst);
-	// rotate_rotate_and_print(&sorted_lst, &stack_a);
-	// print_stack(stack_a);
-	// print_stack(sorted_lst);
-	print_stack(stack_a);
-	print_stack(sorted_lst);
-	reverse_rotate_rotate_and_print(&sorted_lst, &stack_a);
-	print_stack(stack_a);
-	print_stack(sorted_lst);
+
 	return (0);
 }
