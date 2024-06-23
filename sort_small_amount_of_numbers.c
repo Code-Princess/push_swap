@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 11:26:03 by linda             #+#    #+#             */
-/*   Updated: 2024/06/23 23:53:30 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 00:01:38 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,20 @@ void        sort_three_numbers(t_list_push_swap **lst)
     }
     else if (pos_min == 1)
     {
-        
-        int left_node_nbr = find_node_position(temp, pos_min - 1);
-        int right_node_nbr = find_node_position(temp, pos_min + 1);
-        if (left_node_nbr < right_node_nbr)
+        if (temp->nbr < temp->next->next->nbr)
             swap_and_print(&temp, 'a');
         else
             rotate_and_print(&temp, 'a');
     }
     else if (pos_min == 2)
     {
-        // int first_node_nbr = find_node_position(temp, pos_min - 2);
-        // int second_node_nbr = find_node_position(temp, pos_min - 1);
-    // print_stack(temp);
-    // printf("first_node_nbr: %d, second_node_nbr: %d\n", first_node_nbr, second_node_nbr);
-        // if (first_node_nbr < second_node_nbr)
-        //     reverse_rotate_and_print(&temp, 'a');
-        // else
-        // {
-        //     swap_and_print(&temp, 'a');
-        //     reverse_rotate_and_print(&temp, 'a');
-        // }
-        
+        if (temp->nbr < temp->next->nbr)
+            reverse_rotate_and_print(&temp, 'a');
+        else
+        {
+            swap_and_print(&temp, 'a');
+            reverse_rotate_and_print(&temp, 'a'); 
+        }
     }
 }
 
