@@ -6,7 +6,7 @@
 #    By: linda <linda@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/18 23:29:38 by llacsivy          #+#    #+#              #
-#    Updated: 2024/06/23 20:17:45 by linda            ###   ########.fr        #
+#    Updated: 2024/06/24 12:18:07 by linda            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ OBJS 		= ${SRCS:.c=.o}
 all : $(NAME)
 
 $(NAME) : $(LIBFTDOTA) $(OBJS)
-	cc $(OBJS) $(LIBFTDOTA) -o $(NAME)
+	cc  $(OBJS) $(LIBFTDOTA) -o $(NAME)
 # cc -g $(OBJS) $(LIBFTDOTA) /home/linda/LeakSanitizer/liblsan.so -o $(NAME)
 	
 

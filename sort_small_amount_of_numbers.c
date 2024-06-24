@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 11:26:03 by linda             #+#    #+#             */
-/*   Updated: 2024/06/24 00:43:00 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 12:27:19 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void        sort_three_numbers(t_list_push_swap **lst)
             reverse_rotate_and_print(&temp, 'a'); 
         }
     }
+    *lst = temp;
 }
 
 void        sort_four_numbers(t_list_push_swap **stack_a, t_list_push_swap **stack_b)
