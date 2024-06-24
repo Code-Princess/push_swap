@@ -6,16 +6,16 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 12:57:27 by linda             #+#    #+#             */
-/*   Updated: 2024/06/24 14:36:03 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 14:51:53 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // we will have our sqrt functions
-int sqrt_k_sort(int nbr)
+unsigned int sqrt_k_sort(unsigned int nbr)
 { 
-    int   i;
+    unsigned int   i;
 
     i = 1;
     while ( i * i < nbr)
@@ -41,3 +41,30 @@ printf("max: %d\n", max);
         push_to_and_print(stack_b, stack_a, 'a');
     }
 }
+
+// from a to I have three different cases
+void    k_sort_a_to_b(t_list_push_swap **stack_a, t_list_push_swap **stack_b)
+{
+    unsigned int    kv;
+    int             i;
+
+    i = 0;
+    kv = k_sort_var_nbr(*stack_a);
+    while(*stack_a)
+    {
+        if((unsigned int)(*stack_a)->nbr <= i)
+        {
+            push_to_and_print(stack_a, stack_b, 'b');
+            rotate_and_print(stack_b, 'b');
+        }
+        else if((unsigned int)(*stack_a)->nbr <= i + kv)
+            push_to_and_print(stack_a, stack_b, 'b');
+        else
+            rotate_and_print(stack_a, 'a');
+        i++;
+    }
+}
+// we will push from a to b until it s empty
+// - i push to b, rotate b
+// - i + kvar push to b
+// - else rotate to a
