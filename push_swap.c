@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/24 12:54:43 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 14:27:53 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,14 +79,24 @@ int	main(int argc, char *argv[])
 	sorted_lst = sort_list(sorted_lst, ascending);
 	indexing_list(&stack_a, sorted_lst);
 	// print_stack(stack_a);
-	if (argc == 4)
-		sort_three_numbers(&stack_a);
-	if (argc == 5)
-		sort_four_numbers(&stack_a, &stack_b);
-	if (argc == 6)
-		sort_five_numbers(&stack_a, &stack_b);
-	
-	// print_stack(stack_a);
+	// if (argc == 4)
+	// 	sort_three_numbers(&stack_a);
+	// if (argc == 5)
+	// 	sort_four_numbers(&stack_a, &stack_b);
+	// if (argc == 6)
+	// 	sort_five_numbers(&stack_a, &stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
+	printf("//===============\n");
+	while (stack_a)
+		push_to_and_print(&stack_a, &stack_b, 'b');
+	print_stack(stack_a);
+	print_stack(stack_b);
+	printf("//===============\n");
+	k_sort_b_to_a(&stack_a, &stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
+	printf("//===============\n");
 	ft_lstclear_push_swap(&stack_a, del_int);
 	return (0);
 }
