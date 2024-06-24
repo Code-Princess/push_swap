@@ -3,3 +3,8 @@ push_swap
 *.a
 .vscode
 .DS_Store
+Push-Swap-Tester
+*push_swap_test*
+*checker*
+0
+*.txt

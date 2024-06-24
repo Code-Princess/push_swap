@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/24 14:38:40 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 15:28:16 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ void        		sort_five_numbers(t_list_push_swap **stack_a, t_list_push_swap **s
 int 				is_smaller_median(t_list_push_swap *lst, int nbr);
 void    			repeat_rotate(t_list_push_swap **lst, int nbr, char stack_name);
 //========K_SORT_TOOLS_TWO=============================
-// we will have our sqrt functions
 unsigned int 		sqrt_k_sort(unsigned int nbr);
-int 				k_sort_var_nbr(t_list_push_swap *lst);
+unsigned int 		k_sort_var_nbr(t_list_push_swap *lst);
 void    			k_sort_b_to_a(t_list_push_swap **stack_a, t_list_push_swap **stack_b);
+void    			k_sort_a_to_b(t_list_push_swap **stack_a, t_list_push_swap **stack_b);
 //=========LIST_RELATED_OPERATIONS_ONE=============
 t_list_push_swap	*ft_lstnew_push_swap(int nbr);
 void				ft_lstadd_front_push_swap(t_list_push_swap **lst,

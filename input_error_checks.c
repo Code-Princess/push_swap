@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_error_checks.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:53:57 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/20 19:11:19 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/24 16:33:04 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int	is_valid_input(int nr_of_words, char **input_str)
 	int	i;
 
 	i = 0;
+	if (nr_of_words == 1 && input_str[1] == NULL)
+		return (0);
 	while (i < nr_of_words - 1)
 	{
 		if (!is_valid_str(input_str[i]) || !is_int(ft_atol(input_str[i])))

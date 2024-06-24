@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/24 14:27:53 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 16:45:26 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,11 @@ int	main(int argc, char *argv[])
 		free(s);
 	}
 	if (!is_valid_input(argc, argv + 1))
-		return (free_double_pointer(argc, argv, flag_allocated), 
-			ft_putstr_fd("Error\n", 2), 1);
+	{
+		ft_putstr_fd("Error\n", 2);
+		free_double_pointer(argc, argv, flag_allocated);
+		return (1);
+	}
 	if (argc == 1 || argc == 2)
 		return (free_double_pointer(argc, argv, flag_allocated), 0);
 	else if (argc == 3)
@@ -65,38 +68,29 @@ int	main(int argc, char *argv[])
 	{
 		ft_putstr_fd("Error\n", 2);
 		ft_lstclear_push_swap(&stack_a, del_int);
-		// system("leaks push_swap");
 		return (1);
 	}
 	if (!is_unsorted(stack_a))
 	{
 		ft_lstclear_push_swap(&stack_a, del_int);
-		// system("leaks push_swap");
 		return (1);
 	}
 	sorted_lst = copy_list(stack_a);
 	
 	sorted_lst = sort_list(sorted_lst, ascending);
 	indexing_list(&stack_a, sorted_lst);
-	// print_stack(stack_a);
-	// if (argc == 4)
-	// 	sort_three_numbers(&stack_a);
-	// if (argc == 5)
-	// 	sort_four_numbers(&stack_a, &stack_b);
-	// if (argc == 6)
-	// 	sort_five_numbers(&stack_a, &stack_b);
-	print_stack(stack_a);
-	print_stack(stack_b);
-	printf("//===============\n");
-	while (stack_a)
-		push_to_and_print(&stack_a, &stack_b, 'b');
-	print_stack(stack_a);
-	print_stack(stack_b);
-	printf("//===============\n");
-	k_sort_b_to_a(&stack_a, &stack_b);
-	print_stack(stack_a);
-	print_stack(stack_b);
-	printf("//===============\n");
+	if (argc == 4)
+		sort_three_numbers(&stack_a);
+	else if (argc == 5)
+		sort_four_numbers(&stack_a, &stack_b);
+	else if (argc == 6)
+		sort_five_numbers(&stack_a, &stack_b);
+	else
+	{
+		k_sort_a_to_b(&stack_a, &stack_b);
+		k_sort_b_to_a(&stack_a, &stack_b);
+	}
+	
 	ft_lstclear_push_swap(&stack_a, del_int);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 12:57:27 by linda             #+#    #+#             */
-/*   Updated: 2024/06/24 14:51:53 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/24 15:39:37 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ unsigned int sqrt_k_sort(unsigned int nbr)
     return (i);
 }
 // k sort variable ==> sqrt lenght of the list
-int k_sort_var_nbr(t_list_push_swap *lst)
+unsigned int k_sort_var_nbr(t_list_push_swap *lst)
 {
     return (sqrt_k_sort(ft_lstsize_push_swap(lst)) + 1);
 }
@@ -36,7 +36,6 @@ void    k_sort_b_to_a(t_list_push_swap **stack_a, t_list_push_swap **stack_b)
     while(*stack_b)
     {
         max = find_maximum_node_nbr(*stack_b);
-printf("max: %d\n", max);
         repeat_rotate(stack_b, max, 'b');
         push_to_and_print(stack_b, stack_a, 'a');
     }
@@ -46,7 +45,7 @@ printf("max: %d\n", max);
 void    k_sort_a_to_b(t_list_push_swap **stack_a, t_list_push_swap **stack_b)
 {
     unsigned int    kv;
-    int             i;
+    unsigned int    i;
 
     i = 0;
     kv = k_sort_var_nbr(*stack_a);
