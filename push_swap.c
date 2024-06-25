@@ -6,13 +6,12 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/24 16:45:26 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/25 12:42:48 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
-
 
 void	del_int(int nbr)
 {
@@ -37,8 +36,12 @@ int	main(int argc, char *argv[])
 		flag_allocated = 1;
 		s = ft_strjoin("push_swap ", argv[1]);
 		res = ft_split(s, ' ');
-		if (!res)
+		if (!res[1])
+		{
+			free_double_pointer(argc, res, flag_allocated);
+			ft_putstr_fd("Error\n", 2);
 			return (1);
+		}
 		argc = ft_word_nr(s, ' ');
 		argv = res;
 		free(s);

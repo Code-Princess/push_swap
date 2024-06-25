@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 12:57:27 by linda             #+#    #+#             */
-/*   Updated: 2024/06/24 15:39:37 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/25 12:43:47 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,19 @@ void    k_sort_a_to_b(t_list_push_swap **stack_a, t_list_push_swap **stack_b)
     kv = k_sort_var_nbr(*stack_a);
     while(*stack_a)
     {
-        if((unsigned int)(*stack_a)->nbr <= i)
+        if((unsigned int)(*stack_a)->nbr < i)
         {
+			i++;
             push_to_and_print(stack_a, stack_b, 'b');
             rotate_and_print(stack_b, 'b');
         }
-        else if((unsigned int)(*stack_a)->nbr <= i + kv)
+        else if((unsigned int)(*stack_a)->nbr < i + kv)
+		{
             push_to_and_print(stack_a, stack_b, 'b');
+			i++;
+		}
         else
             rotate_and_print(stack_a, 'a');
-        i++;
     }
 }
 // we will push from a to b until it s empty
