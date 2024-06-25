@@ -6,7 +6,7 @@
 /*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/25 12:42:48 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/25 17:58:56 by linda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,49 +24,53 @@ int	main(int argc, char *argv[])
 	char				*s;
 	int					flag_allocated;
 	int					i;
+	int					number_of_arguments;
 	t_list_push_swap	*sorted_lst;
 	t_list_push_swap 	*stack_a;
 	t_list_push_swap	*stack_b;
+	char				**arguments_vector;
 
 	flag_allocated = 0;
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc == 2)
+	number_of_arguments = argc;
+	arguments_vector = argv;
+	if (number_of_arguments == 2)
 	{
 		flag_allocated = 1;
-		s = ft_strjoin("push_swap ", argv[1]);
+		s = ft_strjoin("push_swap ", arguments_vector[1]);
 		res = ft_split(s, ' ');
 		if (!res[1])
 		{
-			free_double_pointer(argc, res, flag_allocated);
+			free_double_pointer(number_of_arguments, res, flag_allocated);
 			ft_putstr_fd("Error\n", 2);
 			return (1);
 		}
-		argc = ft_word_nr(s, ' ');
-		argv = res;
+		number_of_arguments = ft_word_nr(s, ' ');
+		arguments_vector = res;
 		free(s);
 	}
-	if (!is_valid_input(argc, argv + 1))
+	if (!is_valid_input(number_of_arguments, arguments_vector + 1))
 	{
 		ft_putstr_fd("Error\n", 2);
-		free_double_pointer(argc, argv, flag_allocated);
+		free_double_pointer(number_of_arguments, arguments_vector, flag_allocated);
 		return (1);
 	}
-	if (argc == 1 || argc == 2)
-		return (free_double_pointer(argc, argv, flag_allocated), 0);
-	else if (argc == 3)
+	if (number_of_arguments == 1 || number_of_arguments == 2)
+		return (free_double_pointer(number_of_arguments, arguments_vector, flag_allocated), 0);
+	else if (number_of_arguments == 3)
 	{
-		if (ft_atoi(argv[1]) == ft_atoi(argv[2]))
+		if (ft_atoi(arguments_vector[1]) == ft_atoi(arguments_vector[2]))
 			return (ft_putstr_fd("Error\n", 2), 1);
-		if (ft_atoi(argv[1]) > ft_atoi(argv[2]))
+		if (ft_atoi(arguments_vector[1]) > ft_atoi(arguments_vector[2]))
 			ft_putstr_fd("sa\n", 1);
-		return (free_double_pointer(argc, argv, flag_allocated), 0);
+		return (free_double_pointer(number_of_arguments, arguments_vector, flag_allocated), 0);
 	}
 	i = 0;
-	while (++i < argc)
+	while (++i < number_of_arguments)
 		ft_lstadd_back_push_swap(&stack_a,
-			ft_lstnew_push_swap(ft_atoi(argv[i])));
-	free_double_pointer(argc, argv, flag_allocated);
+			ft_lstnew_push_swap(ft_atoi(arguments_vector[i])));
+	free_double_pointer(number_of_arguments, arguments_vector, flag_allocated);
 	if (is_double(stack_a))
 	{
 		ft_putstr_fd("Error\n", 2);
@@ -82,11 +86,11 @@ int	main(int argc, char *argv[])
 	
 	sorted_lst = sort_list(sorted_lst, ascending);
 	indexing_list(&stack_a, sorted_lst);
-	if (argc == 4)
+	if (number_of_arguments == 4)
 		sort_three_numbers(&stack_a);
-	else if (argc == 5)
+	else if (number_of_arguments == 5)
 		sort_four_numbers(&stack_a, &stack_b);
-	else if (argc == 6)
+	else if (number_of_arguments == 6)
 		sort_five_numbers(&stack_a, &stack_b);
 	else
 	{
@@ -97,3 +101,4 @@ int	main(int argc, char *argv[])
 	ft_lstclear_push_swap(&stack_a, del_int);
 	return (0);
 }
+
