@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   k_sort_helper_functions.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 12:57:27 by linda             #+#    #+#             */
-/*   Updated: 2024/06/25 17:45:54 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/26 12:16:52 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	s_smaller_median(t_list_push_swap *lst, int nbr)
+int	is_smaller_median(t_list_push_swap *lst, int nbr)
 {
 	int	median;
 	int	position;
