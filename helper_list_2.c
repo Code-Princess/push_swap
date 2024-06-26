@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helper_list_two.c                                  :+:      :+:    :+:   */
+/*   helper_list_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:22:09 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/20 17:58:19 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 13:26:45 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_lstiter_push_swap(t_list_push_swap *lst, void (*f)(int))
 	}
 }
 
-t_list_push_swap	*ft_lstmap_push_swap(t_list_push_swap *lst, int(*f)(int),
+t_list_push_swap	*ft_lstmap_push_swap(t_list_push_swap *lst, int (*f)(int),
 	void (*del)(int))
 {
 	t_list_push_swap	*new_list;

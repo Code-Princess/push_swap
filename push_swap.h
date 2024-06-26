@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/25 17:57:39 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/26 13:27:20 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ void				ft_lstclear_push_swap(t_list_push_swap **lst,
 						void (*del)(int));
 void				ft_lstiter_push_swap(t_list_push_swap *lst,
 						void (*f)(int));
-t_list_push_swap	*ft_lstmap_push_swap(t_list_push_swap *lst, int(*f)(int), void (*del)(int));
+t_list_push_swap	*ft_lstmap_push_swap(t_list_push_swap *lst, int (*f)(int),
+						void (*del)(int));
 int					find_node_position(t_list_push_swap *lst, int nbr);
 t_list_push_swap	*find_node(t_list_push_swap *lst, int nbr);
 int					find_maximum_node_nbr(t_list_push_swap *lst);
