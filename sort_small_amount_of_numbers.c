@@ -6,11 +6,12 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 11:26:03 by linda             #+#    #+#             */
-/*   Updated: 2024/06/26 19:59:54 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 20:41:03 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 void	sort_two_numbers(t_list_push_swap **lst)
 {
@@ -36,6 +37,7 @@ t_list_push_swap	**sort_three_numbers(t_list_push_swap **lst)
 		rotate_and_print(lst, 'a');
 		sort_two_numbers(lst);
 		reverse_rotate_and_print(lst, 'a');
+		return (lst);
 	}
 	else if (pos_min == 1)
 	{
@@ -46,11 +48,16 @@ t_list_push_swap	**sort_three_numbers(t_list_push_swap **lst)
 	}
 	else if (pos_min == 2)
 	{
-		sort_two_numbers(lst);
-		reverse_rotate_and_print(lst, 'a');
+		return (lst);
 	}
 	*lst = temp;
 	return (lst);
+}
+
+void	call_sort_two_and_reverse_rotate(t_list_push_swap **lst)
+{
+	sort_two_numbers(lst);
+	reverse_rotate_and_print(lst, 'a');
 }
 
 void	sort_four_numbers(t_list_push_swap **stack_a,

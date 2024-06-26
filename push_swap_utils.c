@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:47:12 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/26 20:01:47 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 20:21:24 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	play_the_game(int number_of_arguments, t_list_push_swap **stack_a,
 	sorted_lst = sort_list(sorted_lst, ascending);
 	indexing_list(stack_a, sorted_lst);
 	if (number_of_arguments == 4)
-		stack_a = sort_three_numbers(stack_a);
+		sort_three_numbers(stack_a);
 	else if (number_of_arguments == 5)
 		sort_four_numbers(stack_a, stack_b);
 	else if (number_of_arguments == 6)
@@ -36,7 +36,6 @@ void	play_the_game(int number_of_arguments, t_list_push_swap **stack_a,
 		k_sort_a_to_b(stack_a, stack_b);
 		k_sort_b_to_a(stack_a, stack_b);
 	}
-	print_stack(*stack_a);
 	ft_lstclear_push_swap(stack_a, del_int);
 }
 

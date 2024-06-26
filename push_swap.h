@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/26 20:01:08 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 20:41:20 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int					is_int(long nbr);
 int					is_valid_input(int nr_of_words, char **input_str);
 int					is_double(t_list_push_swap *lst);
 int					is_unsorted(t_list_push_swap *lst);
-// void				sort_three_numbers(t_list_push_swap **lst);
 t_list_push_swap	**sort_three_numbers(t_list_push_swap **lst);
 void				sort_four_numbers(t_list_push_swap **stack_a,
 						t_list_push_swap **stack_b);
@@ -92,6 +91,5 @@ void				check_double_entries(t_list_push_swap **stack);
 void				parse_input_string(t_input_data *input_data);
 void				check_input(t_input_data *input_data);
 void				handle_up_to_3_arguments(t_input_data *input_data);
-
-
+void				call_sort_two_and_reverse_rotate(t_list_push_swap **lst);
 #endif
