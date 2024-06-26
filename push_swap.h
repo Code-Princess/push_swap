@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/26 16:11:42 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 17:36:44 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,14 @@ typedef struct s_list_push_swap
 	int						nbr;
 	int						position;
 	struct s_list_push_swap	*next;
-}					t_list_push_swap;
+}	t_list_push_swap;
+
+typedef struct s_input_data
+{
+	int		number_of_arguments;
+	int		flag_allocated;
+	char	**arguments_vector;
+}	t_input_data;
 
 int					is_valid_str(char *s);
 int					is_int(long nbr);
@@ -80,4 +87,9 @@ void				reverse_rotate_and_print(t_list_push_swap **stack,
 						char stack_name);
 void				play_the_game(int number_of_arguments,
 						t_list_push_swap **stack_a, t_list_push_swap **stack_b);
+void				check_double_entries(t_list_push_swap **stack);
+void				parse_input_string(t_input_data *input_data);
+void				check_input(t_input_data *input_data);
+void				handle_up_to_3_arguments(t_input_data *input_data);
+
 #endif
