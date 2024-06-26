@@ -6,12 +6,11 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 11:26:03 by linda             #+#    #+#             */
-/*   Updated: 2024/06/26 20:48:21 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 22:07:15 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	sort_two_numbers(t_list_push_swap **lst)
 {

@@ -6,12 +6,11 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/26 17:31:59 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 22:07:06 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	del_int(int nbr)
 {
