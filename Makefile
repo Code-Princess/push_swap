@@ -6,7 +6,7 @@
 #    By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/18 23:29:38 by llacsivy          #+#    #+#              #
-#    Updated: 2024/06/26 12:36:37 by llacsivy         ###   ########.fr        #
+#    Updated: 2024/06/26 16:19:56 by llacsivy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS 		= push_swap.c input_error_checks.c helper_list_1.c \
 				sort_functions.c command_helpers.c command_functions_swap.c \
 				command_functions_push.c command_functions_rotate.c \
 				sort_small_amount_of_numbers.c helper_list_3.c \
-				k_sort_helper_functions.c k_sort_functions.c
+				k_sort_helper_functions.c k_sort_functions.c push_swap_utils.c
 				
 
 OBJS 		= ${SRCS:.c=.o}
@@ -32,7 +32,7 @@ all : $(NAME)
 
 $(NAME) : $(LIBFTDOTA) $(OBJS)
 	cc  $(OBJS) $(LIBFTDOTA) -o $(NAME)
-# cc -g $(OBJS) $(LIBFTDOTA) /home/linda/LeakSanitizer/liblsan.so -o $(NAME)
+# cc -g $(OBJS) $(LIBFTDOTA) /Users/llacsivy/LeakSanitizer/liblsan.so -o $(NAME)
 	
 
 $(LIBFTDOTA):

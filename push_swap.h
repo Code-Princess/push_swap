@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:50:36 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/26 13:27:20 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:11:42 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,6 @@ void				push_to_and_print(t_list_push_swap **stack_b,
 void				rotate_and_print(t_list_push_swap **stack, char stack_name);
 void				reverse_rotate_and_print(t_list_push_swap **stack,
 						char stack_name);
+void				play_the_game(int number_of_arguments,
+						t_list_push_swap **stack_a, t_list_push_swap **stack_b);
 #endif

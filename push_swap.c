@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linda <linda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:35:08 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/06/25 17:58:56 by linda            ###   ########.fr       */
+/*   Updated: 2024/06/26 16:19:17 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	main(int argc, char *argv[])
 	int					flag_allocated;
 	int					i;
 	int					number_of_arguments;
-	t_list_push_swap	*sorted_lst;
 	t_list_push_swap 	*stack_a;
 	t_list_push_swap	*stack_b;
 	char				**arguments_vector;
@@ -77,28 +76,33 @@ int	main(int argc, char *argv[])
 		ft_lstclear_push_swap(&stack_a, del_int);
 		return (1);
 	}
-	if (!is_unsorted(stack_a))
-	{
-		ft_lstclear_push_swap(&stack_a, del_int);
-		return (1);
-	}
-	sorted_lst = copy_list(stack_a);
-	
-	sorted_lst = sort_list(sorted_lst, ascending);
-	indexing_list(&stack_a, sorted_lst);
-	if (number_of_arguments == 4)
-		sort_three_numbers(&stack_a);
-	else if (number_of_arguments == 5)
-		sort_four_numbers(&stack_a, &stack_b);
-	else if (number_of_arguments == 6)
-		sort_five_numbers(&stack_a, &stack_b);
-	else
-	{
-		k_sort_a_to_b(&stack_a, &stack_b);
-		k_sort_b_to_a(&stack_a, &stack_b);
-	}
-	
-	ft_lstclear_push_swap(&stack_a, del_int);
-	return (0);
+	play_the_game(number_of_arguments, &stack_a, &stack_b);
+	return (EXIT_SUCCESS);
 }
 
+void	play_the_game(int number_of_arguments, t_list_push_swap **stack_a,
+			t_list_push_swap **stack_b)
+{
+	t_list_push_swap	*sorted_lst;
+
+	if (!is_unsorted(*stack_a))
+	{
+		ft_lstclear_push_swap(stack_a, del_int);
+		exit(EXIT_FAILURE);
+	}
+	sorted_lst = copy_list(*stack_a);
+	sorted_lst = sort_list(sorted_lst, ascending);
+	indexing_list(stack_a, sorted_lst);
+	if (number_of_arguments == 4)
+		sort_three_numbers(stack_a);
+	else if (number_of_arguments == 5)
+		sort_four_numbers(stack_a, stack_b);
+	else if (number_of_arguments == 6)
+		sort_five_numbers(stack_a, stack_b);
+	else
+	{
+		k_sort_a_to_b(stack_a, stack_b);
+		k_sort_b_to_a(stack_a, stack_b);
+	}
+	ft_lstclear_push_swap(stack_a, del_int);
+}
