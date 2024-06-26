@@ -6,7 +6,7 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 11:26:03 by linda             #+#    #+#             */
-/*   Updated: 2024/06/26 20:41:03 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/06/26 20:48:21 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ t_list_push_swap	**sort_three_numbers(t_list_push_swap **lst)
 	if (pos_min == 0)
 	{
 		rotate_and_print(lst, 'a');
-		sort_two_numbers(lst);
-		reverse_rotate_and_print(lst, 'a');
+		call_sort_two_and_reverse_rotate(lst);
 		return (lst);
 	}
 	else if (pos_min == 1)
@@ -48,6 +47,7 @@ t_list_push_swap	**sort_three_numbers(t_list_push_swap **lst)
 	}
 	else if (pos_min == 2)
 	{
+		call_sort_two_and_reverse_rotate(lst);
 		return (lst);
 	}
 	*lst = temp;
