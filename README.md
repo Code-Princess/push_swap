@@ -20,3 +20,4 @@ To do so you have the following operations at your disposal:
 To illustrate the effect of some of these instructions, let’s sort a random list of integers!
 
 <img width="260" alt="Screenshot 2024-07-23 111639" src="https://github.com/user-attachments/assets/1a1a6a09-e824-432b-a3d1-77c2b317b2d1">
+Integers from *stack a* get sorted in 12 instructions.
