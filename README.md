@@ -48,6 +48,6 @@ or
 ./push_swap "2 1 3 6 5 8"
 ```
 
-<img width="277" alt="image" src="https://github.com/user-attachments/assets/596f4c6b-e3d0-4e58-9ebd-0bfc0ef5033c">
+<img width="276" alt="image" src="https://github.com/user-attachments/assets/b0d255eb-d115-4d9c-8182-40e55a6c8134">
 
 You can replace the numbers with any integer numbers of your choice.
