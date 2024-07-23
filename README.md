@@ -5,6 +5,7 @@ You have 2 stacks named *stack a* and *stack b*.
 At the beginning: 
 - The *stack a* contains a random amount of negative and/or positive numbers which cannot be duplicated.
 - The *stack b* is empty.
+
 The goal is to sort in ascending order numbers into *stack a*.
 To do so you have the following operations at your disposal:
 - **sa (swap a):** Swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.
@@ -17,3 +18,5 @@ To do so you have the following operations at your disposal:
 - **rrb (reverse rotate b):** Shift down all elements of stack b by 1. The last element becomes the first one.
 ## Example
 To illustrate the effect of some of these instructions, let’s sort a random list of integers!
+
+<img width="260" alt="Screenshot 2024-07-23 111639" src="https://github.com/user-attachments/assets/1a1a6a09-e824-432b-a3d1-77c2b317b2d1">
