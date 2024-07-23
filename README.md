@@ -1,11 +1,11 @@
 # Push_Swap
 This project sorts numbers on a stack from the smalles number to the biggest number with a limited set of instructions. The goal is to use the lowest possible amount of actions. Therefore we have two stacks: *stack a* and *stack b*. For the implementation I used the datastructure *linked list* to represent a stack. To presort the numbers, I implemented the K-sort-algorithm.
 
-## 👀 YouTube Video: Code-Princess/Mein erstes selbst programmiertes 2D Computer Spiel/Berry-Princess-Game/Retro-Style🍓👸
+## 👀 YouTube Video: Code Princess/push_swap Programm Vorstellung/K-Sortierungsalgorithmus/push-swap/push swap/C-Code
 <!-- YouTube video cards from https://github.com/DenverCoder1/github-readme-youtube-cards -->
 <!-- https://ytcards.demolab.com/?id=<video ID>&title=<video+title>&lang=en&timestamp=<video publish date in Unix time format>&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5&duration=<video duration in seconds> "<video title>") -->
 <!-- BEGIN YOUTUBE-CARDS -->
-[![Code-Princess/Mein erstes selbst programmiertes 2D Computer Spiel/Berry-Princess-Game/Retro-Style](https://ytcards.demolab.com/?id=uH6tfKEWT6Y&title=Code-Princess/Mein+erstes+selbst+programmiertes+2D+Computer+Spiel/Berry-Princess-Game/Retro-Style&lang=en&timestamp=1721426400&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=850&border_radius=5&duration=262 "Code-Princess/Mein erstes selbst programmiertes 2D Computer Spiel/Berry-Princess-Game/Retro-Style")](https://youtu.be/uH6tfKEWT6Y?si=ZQqomfBc4khFFNkN)
+[![Code Princess/push_swap Programm Vorstellung/K-Sortierungsalgorithmus/push-swap/push swap/C-Code](https://ytcards.demolab.com/?id=a3epgYq_sEY&title=Code Princess/push_swap+Programm+Vorstellung/K-Sortierungsalgorithmus/push-swap/push+swap/C-Code&lang=en&timestamp=1729202400&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=850&border_radius=5&duration=591 "Code Princess/push_swap Programm Vorstellung/K-Sortierungsalgorithmus/push-swap/push swap/C-Code")](https://youtu.be/a3epgYq_sEY?si=Bqkay9j9jpy0e0MK)
 <!-- END YOUTUBE-CARDS -->
 ## The Rules 
 You have 2 stacks named *stack a* and *stack b*.
