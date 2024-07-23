@@ -23,7 +23,7 @@ To do so you have the following operations at your disposal:
 - **rb (rotate b):** Shift up all elements of stack b by 1. The first element becomes the last one.
 - **rra (reverse rotate a):** Shift down all elements of stack a by 1. The last element becomes the first one.
 - **rrb (reverse rotate b):** Shift down all elements of stack b by 1. The last element becomes the first one.
-## Example
+## Example for operations
 To illustrate the effect of some of these instructions, let’s sort a random list of integers!
 
 <img width="260" alt="Screenshot 2024-07-23 111639" src="https://github.com/user-attachments/assets/1a1a6a09-e824-432b-a3d1-77c2b317b2d1">
@@ -47,4 +47,7 @@ or
 ```
 ./push_swap "2 1 3 6 5 8"
 ```
+
+<img width="277" alt="image" src="https://github.com/user-attachments/assets/596f4c6b-e3d0-4e58-9ebd-0bfc0ef5033c">
+
 You can replace the numbers with any integer numbers of your choice.
