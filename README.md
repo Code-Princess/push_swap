@@ -1,5 +1,5 @@
 # Push_Swap
-This project sorts numbers on a stack from the smalles number to the biggest number with a limited set of instructions. The goal is to use the lowest possible amount of actions. Therefore we have two stacks: *stack a* and *stack b*. For the implementation I used the datastructure *linked list* to represent a stack.
+This project sorts numbers on a stack from the smalles number to the biggest number with a limited set of instructions. The goal is to use the lowest possible amount of actions. Therefore we have two stacks: *stack a* and *stack b*. For the implementation I used the datastructure *linked list* to represent a stack. To presort the numbers, I implemented the K-sort-algorithm.
 ## The Rules 
 You have 2 stacks named *stack a* and *stack b*.
 At the beginning: 
